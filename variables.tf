@@ -1,11 +1,11 @@
-variable "namespace" {
-  description = "Namespace (e.g. `cp` or `anmolnagpal`)"
+variable "organization" {
   type        = "string"
+  description = "Organization (e.g. `cp` or `anmolnagpal`)"
 }
 
-variable "stage" {
-  description = "Stage (e.g. `prod`, `dev`, `staging`)"
+variable "environment" {
   type        = "string"
+  description = "Environment (e.g. `prod`, `dev`, `staging`)"
 }
 
 variable "name" {

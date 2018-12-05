@@ -1,11 +1,11 @@
 module "label" {
-  source     = "git::https://github.com/anmolnagpal/terraform-null-label.git?ref=tags/0.3.3"
-  namespace  = "${var.namespace}"
-  name       = "${var.name}"
-  stage      = "${var.stage}"
-  delimiter  = "${var.delimiter}"
-  attributes = "${var.attributes}"
-  tags       = "${var.tags}"
+  source       = "git::https://github.com/anmolnagpal/terraform-tags.git?ref=master"
+  organization = "${var.organization}"
+  name         = "${var.name}"
+  environment  = "${var.environment}"
+  delimiter    = "${var.delimiter}"
+  attributes   = "${var.attributes}"
+  tags         = "${var.tags}"
 }
 
 resource "aws_vpc" "default" {
