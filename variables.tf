@@ -1,40 +1,27 @@
-variable "organization" {
-  type        = "string"
-  description = "Organization (e.g. `cp` or `anmolnagpal`)"
-}
-
-variable "environment" {
-  type        = "string"
-  description = "Environment (e.g. `prod`, `dev`, `staging`)"
-}
-
-variable "name" {
+variable "Name" {
   description = "Name  (e.g. `app` or `cluster`)"
   type        = "string"
 }
 
-variable "delimiter" {
+variable "Environment" {
   type        = "string"
-  default     = "-"
-  description = "Delimiter to be used between `namespace`, `stage`, `name` and `attributes`"
+  description = "Environment (e.g. `prod`, `dev`, `staging`)"
 }
 
-variable "attributes" {
-  type        = "list"
-  default     = []
-  description = "Additional attributes (e.g. `1`)"
+variable "CreatedBy" {
+  type        = "string"
+  description = "CreatedBy (e.g. `terrafrom`, `dev`, `devops`)"
 }
 
-variable "tags" {
-  type        = "map"
-  default     = {}
-  description = "Additional tags (e.g. map(`BusinessUnit`,`XYZ`)"
+variable "Organization" {
+  type        = "string"
+  description = "Organisation (e.g. `clouddrove`, `cd`)"
 }
 
 variable "cidr_block" {
   type        = "string"
   description = "CIDR for the VPC"
-  default     = "10.0.0.0/16"
+  default     = ""
 }
 
 variable "instance_tenancy" {
