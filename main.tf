@@ -1,13 +1,3 @@
-module "label" {
-  source       = "git::https://github.com/anmolnagpal/terraform-tags.git?ref=master"
-  organization = "${var.organization}"
-  name         = "${var.name}"
-  environment  = "${var.environment}"
-  delimiter    = "${var.delimiter}"
-  attributes   = "${var.attributes}"
-  tags         = "${var.tags}"
-}
-
 resource "aws_vpc" "default" {
   cidr_block                       = "${var.cidr_block}"
   instance_tenancy                 = "${var.instance_tenancy}"
@@ -16,10 +6,22 @@ resource "aws_vpc" "default" {
   enable_classiclink               = "${var.enable_classiclink}"
   enable_classiclink_dns_support   = "${var.enable_classiclink_dns_support}"
   assign_generated_ipv6_cidr_block = true
-  tags                             = "${module.label.tags}"
+
+  tags {
+    Name         = "${var.Name}"
+    Environment  = "${var.Environment}"
+    CreatedBy    = "${var.CreatedBy}"
+    Organization = "${var.Organization}"
+  }
 }
 
 resource "aws_internet_gateway" "default" {
   vpc_id = "${aws_vpc.default.id}"
-  tags   = "${module.label.tags}"
+
+  tags {
+    Name         = "${var.Name}"
+    Environment  = "${var.Environment}"
+    CreatedBy    = "${var.CreatedBy}"
+    Organization = "${var.Organization}"
+  }
 }
