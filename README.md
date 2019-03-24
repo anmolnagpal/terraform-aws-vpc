@@ -23,7 +23,7 @@ module "vpc" {
 | CreatedBy | CreatedBy (e.g. `terrafrom`, `dev`, `devops`) | string | n/a | yes |
 | Environment | Environment (e.g. `prod`, `dev`, `staging`) | string | n/a | yes |
 | Name | Name  (e.g. `app` or `cluster`) | string | n/a | yes |
-| Organization | Organisation (e.g. `bac`, `cd`) | string | n/a | yes |
+| Organization | Organisation (e.g. `clouddrove`, `cd`) | string | n/a | yes |
 | cidr\_block | CIDR for the VPC | string | `""` | no |
 | enable\_classiclink | A boolean flag to enable/disable ClassicLink for the VPC | string | `"false"` | no |
 | enable\_classiclink\_dns\_support | A boolean flag to enable/disable ClassicLink DNS Support for the VPC | string | `"false"` | no |
