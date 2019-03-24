@@ -50,3 +50,13 @@ module "vpc" {
 | vpc\_ipv6\_association\_id | The association ID for the IPv6 CIDR block |
 | vpc\_main\_route\_table\_id | The ID of the main route table associated with this VPC. |
 
+
+- Refrence :
+    - https://aws.amazon.com/vpc/
+    - https://docs.aws.amazon.com/vpc/index.html
+
+## 👬 Contribution
+- Open pull request with improvements
+- Discuss ideas in issues
+- Reach out with any feedback [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/anmol_nagpal.svg?style=social&label=Follow%20%40anmol_nagpal)](https://twitter.com/anmol_nagpal)
+
