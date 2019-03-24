@@ -9,10 +9,10 @@ module "vpc" {
   enable_dns_support             = "true"
   enable_classiclink             = "false"
   enable_classiclink_dns_support = "false"
-  Name                           = "${var.Environment}-vpc"
-  Environment                    = "${var.Environment}"
-  CreatedBy                      = "${var.CreatedBy}"
-  Organization                   = "${var.Organization}"
+  Name                           = "test-vpc"
+  Environment                    = "test"
+  CreatedBy                      = "terraform"
+  Organization                   = "clouddrove"
 }
 ```
 
