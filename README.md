@@ -1,3 +1,8 @@
+<p align="center"><img src="https://i.imgur.com/0On8dTw.jpg" /></p>
+
+> Terraform module for simplified creation of VPC
+
+
 ## Examples
 
 ```hcl
